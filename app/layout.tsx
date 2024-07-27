@@ -10,25 +10,25 @@ import { ThemeProvider } from "./theme-provider";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://onurhan.dev"),
+  metadataBase: new URL("https://juz1.cn"),
   title: {
-    default: "Onurhan Demir",
-    template: "%s | Onurhan Demir",
+    default: "Juzi",
+    template: "%s | Juzi",
   },
   description: "Front-end Engineer",
   openGraph: {
-    title: "Onurhan Demir",
+    title: "Juzi",
     description: "Front-end Engineer",
-    url: "https://onurhan.dev",
-    siteName: "Onurhan Demir",
+    url: "https://juz1.cn",
+    siteName: "Juzi",
     locale: "en_US",
     type: "website",
     images: [
       {
-        url: "https://onurhan.dev/logo.svg",
+        url: "https://juz1.cn/avatar.png",
         width: 1200,
         height: 630,
-        alt: "Onurhan Demir",
+        alt: "Juzi",
       },
     ],
   },
@@ -47,10 +47,6 @@ export const metadata: Metadata = {
     title: "Onurhan Demir",
     card: "summary_large_image",
   },
-  verification: {
-    google: "K1pkJ72cY3DylswXke2MHJGxmjJ91WXwgozcCICvFrU",
-    // TODO: Add yandex verification key here
-  },
 };
 
 export default function RootLayout({
@@ -65,7 +61,7 @@ export default function RootLayout({
       >
         <ThemeProvider
           attribute="class"
-          defaultTheme="theme"
+          defaultTheme="system"
           enableSystem
           disableTransitionOnChange
         >

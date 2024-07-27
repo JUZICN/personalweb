@@ -4,18 +4,25 @@ import { cn } from "@/lib/utils";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import Container from "./shared/container";
 import { ModeToggle } from "./ui/theme-toggle";
+import { useState, useEffect } from 'react';
+import Container from "./shared/container";
+import styles from './header.module.css';
 
 const NAV_ITEMS = {
   about: "/",
   blog: "/blog",
-  work: "/work",
+  project: "/project",
 };
 
 export const Header = () => {
   const pathname = usePathname();
+  const [name, setName] = useState('Juzi');
 
+  const handleClick = () => {
+    setName(name === 'Juzi' ? 'YuXinYi' : 'Juzi');
+  };
+  
   return (
     <header>
       <Container size="large">
@@ -26,20 +33,20 @@ export const Header = () => {
           <div className="flex flex-row items-center">
             <Link href="/">
               <Image
-                src="/logo.svg"
+                src="/avatar.png"
                 alt="Logo"
                 width={40}
                 height={40}
                 priority={true}
               />
-              <span className="sr-only">Onurhan Demir</span>
+              <span className="sr-only" onClick={handleClick}>{name}</span>
             </Link>
 
             <div className="flex flex-col ml-4">
-              <span className="text-medium inline-block font-medium">
-                Onurhan Demir
-              </span>
-              <span className="opacity-60">frontend engineer</span>
+            <span className="text-medium inline-block font-medium" onClick={handleClick}>
+              {name}
+            </span>
+            <span className="opacity-60">frontend engineer</span>
             </div>
           </div>
 

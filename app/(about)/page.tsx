@@ -1,18 +1,15 @@
 import Container from "@/components/shared/container";
 import Social from "@/components/social";
+import Footer from '@/components/footer';
 
 export default function About() {
   const paragraphs = [
-    `As a Front-end Engineer working independently, I specialize in
-    building user interfaces for various brands. My passion lies in the
-    intersection of design and coding, which has shaped my journey into
-    front-end development.`,
+`I enjoy programming. Playing around with code, discovering new tech, and building fun and useful projects are my favorite. On the projects page, I will show you all of my projects with a Github repository and an online demo.`,
     `Driven by a love for software development, I thrive on receiving user
     feedback and improving the overall user experience. It's
     especially exciting to streamline production and focus solely on
     building.`,
-    `Outside of work, I enjoy creating minimalist digital products that
-    solve web-related challenges and simplify our development workflow.`,
+    `In my spare time, I like creating videos about programming. Not just tutorial, but also share some opinions and experience. You can find me on 哔哩哔哩 by searching 他五格连我三刀`,
   ];
 
   return (
@@ -22,8 +19,9 @@ export default function About() {
       text-zinc-800 dark:text-zinc-200 container animate-enter"
     >
       <p className="my-5 text-zinc-800 dark:text-zinc-200">
-        Hi, I&apos;m Onurhan.
+        Hi👋, I&apos;m Juzi. A student at ShanDong
       </p>
+      <script src="https://res.juz1.cn/js/copyright.js" async></script>
       {paragraphs.map((paragraph, index) => (
         <div
           key={paragraph}
@@ -40,6 +38,7 @@ export default function About() {
         </div>
       ))}
       <Social />
+      <Footer />
     </Container>
   );
 }

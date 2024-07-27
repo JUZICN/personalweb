@@ -5,8 +5,8 @@
 @import "@upstash/claps/style.css";
 
 ::selection {
-  color: #047857;
-  background-color: #34d399;
+  color: #000;
+  background-color: #DCDCDC;
 }
 
 @layer base {
@@ -234,4 +234,10 @@ table {
   animation: enter 0.3s ease both;
   animation-delay: calc(var(--delay) * var(--stagger));
   --delay: 120ms;
+}
+footer {
+  text-align: end;
+  margin: 40px 0;
+  color: var(--element8);
+  font-size: 14px;
 }

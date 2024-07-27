@@ -1,5 +1,6 @@
 import { Fragment } from "react";
 import type { Metadata } from "next";
+import Footer from '@/components/footer';
 
 import { getBlogPosts } from "../db/blog";
 import Container from "@/components/shared/container";
@@ -31,6 +32,8 @@ export default function Blog() {
             {index !== array.length - 1 && <Separator />}
           </Fragment>
         ))}
+              <script src="https://res.juz1.cn/js/copyright.js" async></script>
+              <Footer />
     </Container>
   );
 }
