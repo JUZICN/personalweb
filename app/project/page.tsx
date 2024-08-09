@@ -19,7 +19,6 @@ export default function Work() {
         <p className="text-neutral-600 dark:text-neutral-400 text-sm">
           2023-{new Date().getFullYear()}
         </p>
-          <p>Personal</p>
           <p>1.<a href="https://juzi.club" target="_blank">JuziClub</a>   MyGuild</p>
           <p>2.<a href="https://juz1.cn/blog" target="_blank">Blog</a>   MyBlog</p>
           <p>3.<a href="https://forum.juz1.cn" target="_blank">Forum</a>   MyForum</p>
